@@ -306,7 +306,6 @@ X_test_scaled = scaler.transform(X_test)
 print("\nData scaled successfully.")
 
 # --- 5. ML Algorithms (Regression) ---
-# We have removed SVR and KNN as they are slow on larger datasets, and removed Lasso/Ridge
 # to keep the training lean and fast.
 models = {
     'Linear Regression': LinearRegression(),
@@ -323,7 +322,7 @@ for name, model in models.items():
     model.fit(X_train_scaled, y_train)
     trained_models[name] = model
 
-# --- 6. Hyperparameter Tuning (REMOVED: The slow GridSearchCV step is removed) ---
+
 
 # --- 7. Model Evaluation and Comparison ---
 results = {}
